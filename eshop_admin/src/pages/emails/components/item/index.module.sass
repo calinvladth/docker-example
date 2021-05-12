@@ -1,0 +1,22 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    border: .1rem solid $black
+    border-radius: $radius
+
+    padding: 1.5rem 1rem
+
+    > div
+        width: 100%
+
+        &:nth-child(1)
+            text-align: left
+
+        &:nth-child(2)
+            text-align: right

@@ -1,0 +1,89 @@
+@import '../../assets/style/index'
+
+$item_size: 3rem
+
+.box
+    position: relative
+
+
+.boxChild
+    width: 100%
+    height: auto
+
+    margin: 1rem 0 3rem 0
+
+.boxInfo
+    margin-bottom: $section_margin
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    @include md
+        padding: 0 1rem
+
+    @include sm
+        grid-template-columns: 1fr
+        padding: 0 1rem
+
+        * button
+            width: 100%
+
+    > div
+        display: flex
+        align-items: center
+
+        @include sm
+            margin-top: 2.5rem
+
+        &:nth-child(1)
+            justify-content: flex-start
+
+            @include sm
+                grid-row: 2
+
+
+        &:nth-child(2)
+            justify-content: flex-end
+
+            @include sm
+                justify-content: center
+
+.boxPages
+    margin-top: $section_margin
+    display: flex
+    //justify-content: center
+    align-items: center
+
+    //> div,
+    //> span
+    //    border: .1rem solid $black
+
+
+.page
+    color: $black
+    width: $item_size
+    height: $item_size
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+    &:nth-child(1)
+        margin-left: 0
+
+    &:hover
+        color: $dark_grey
+
+.pageChange
+    width: $item_size
+    height: $item_size
+
+    padding: .8rem 0
+
+    > span
+        $size: 1.25rem
+        height: 100%
+        width: 100%
+
+.current
+    color: $dark_grey

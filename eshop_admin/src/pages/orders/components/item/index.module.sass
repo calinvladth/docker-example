@@ -1,0 +1,52 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+
+    border: .1rem solid $black
+    border-radius: $radius
+
+    padding: 1rem
+
+    &:hover
+        background-color: rgba($dark_grey, .5)
+
+
+    > div
+        text-align: center
+        overflow: auto
+        padding: 1rem 0
+
+        &:nth-child(1)
+            text-align: left
+
+        &:nth-last-child(1)
+            text-align: right
+
+        > p
+            font-size: 1.4rem
+
+.processed
+    display: flex
+    justify-content: center
+    align-items: center
+
+    > span
+        display: inline-block
+        $size: 2rem
+        width: $size
+        height: $size
+        background-color: $orange
+        border: .1rem solid $black
+        border-radius: 50%
+
+.processedActive
+    > span
+        background-color: $green
+
+.canceled
+    background-color: rgba($red, .5)

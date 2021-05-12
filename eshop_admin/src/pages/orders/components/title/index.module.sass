@@ -1,0 +1,21 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+
+    padding-bottom: 1rem
+
+    font-size: 1.5rem
+
+    > div
+        text-align: center
+
+        &:nth-child(1)
+            text-align: left
+
+        &:nth-last-child(1)
+            text-align: right

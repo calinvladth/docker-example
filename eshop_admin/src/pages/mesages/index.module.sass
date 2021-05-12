@@ -1,0 +1,45 @@
+@import "../../assets/style/index"
+
+.box
+    width: 100%
+    height: auto
+
+    margin: 7.5rem 0
+
+    * span
+        font-size: 1.5rem
+
+.boxContent
+    width: 100%
+
+    > div
+        margin-top: 1rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+.table
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    > div
+        width: 100%
+        height: auto
+
+        &:nth-child(1)
+            text-align: left
+
+        &:nth-last-child(1)
+            text-align: right
+
+.tableItem
+    width: 100%
+    border: .1rem solid $black
+    border-radius: $radius
+    padding: 1.5rem 1rem
+
+    &:hover
+        background-color: rgba($dark_grey, .5)

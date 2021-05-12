@@ -1,0 +1,17 @@
+@import '../../../../assets/style/index'
+$gap: 1rem
+
+.box
+    width: 100%
+    height: auto
+
+    > div
+        margin-top: $gap
+
+        &:nth-child(1)
+            margin-top: 0
+
+.formGroup
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: $gap

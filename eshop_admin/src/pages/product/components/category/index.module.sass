@@ -1,0 +1,88 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    > div
+        margin-top: 2.5rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+.boxList
+    width: 100%
+
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr))
+    grid-gap: 1rem
+
+
+    > div
+        border: .1rem solid $black
+        border-radius: $radius
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        font-size: 1.5rem
+        padding: 1rem
+
+        cursor: pointer
+
+        &:hover
+            background-color: $dark_grey
+
+            > input
+                color: $white
+
+.boxListItem
+    position: relative
+    overflow: hidden
+
+
+    > input
+        border: none
+        outline: none
+        background-color: transparent
+        padding: 0
+        cursor: pointer
+
+        &:focus
+            border: none !important
+            outline: none !important
+
+    > span
+        width: auto
+        height: 100%
+        padding: 1rem
+
+        position: absolute
+        top: 0
+        right: 0
+
+        opacity: .4
+        background-color: rgba(red, .2)
+        color: $white
+        cursor: pointer
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:hover
+            background-color: rgba(red, .8)
+            opacity: 1
+
+.boxListEdit
+    background-color: $orange !important
+
+
+.form
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: 1fr auto
+    grid-gap: 1rem

@@ -1,0 +1,35 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 1rem
+
+    > div
+        border: .1rem solid $black
+        border-radius: $radius
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        cursor: pointer
+
+        &:nth-child(1)
+            color: $red
+
+
+.process
+    background-color: $orange
+    color: $white
+
+.processed
+    background-color: $green
+    color: $white
+
+.canceled
+    background-color: $red
+    color: $white !important

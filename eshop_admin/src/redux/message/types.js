@@ -1,0 +1,4 @@
+module.exports = {
+    GET_MESSAGE: 'GET_MESSAGE',
+    CLEAR_MESSAGE_STATE: 'CLEAR_MESSAGE_STATE'
+}

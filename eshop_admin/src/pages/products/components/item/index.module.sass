@@ -1,0 +1,68 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+    min-height: 10rem
+
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 1rem
+
+    border: .1rem solid $black
+    border-radius: $radius
+    overflow: hidden
+
+    &:hover
+        cursor: pointer
+        //transform: scale(1.005)
+
+    > div
+        width: 100%
+        height: auto
+        //border: .1rem solid $black
+
+.image
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+
+    overflow: auto
+
+    > div
+        margin-left: 1rem
+
+        &:nth-child(1)
+            margin-left: 0
+
+
+.name
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.price
+    display: flex
+    justify-content: center
+    align-items: center
+
+.status
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+    > span
+        display: block
+        width: 2rem
+        height: 2rem
+        border: .1rem solid $black
+        border-radius: 50%
+
+.statusActive
+    background-color: green
+
+.statusInactive
+    background-color: red

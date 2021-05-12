@@ -1,0 +1,35 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+    display: flex
+
+    justify-content: space-between
+
+    border: .1rem solid $black
+    border-top: 0
+    border-bottom-left-radius: $radius
+    border-bottom-right-radius: $radius
+    padding: 1rem
+
+    font-size: 1.5rem
+
+
+.links
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    > div
+        margin-left: 1rem
+
+        &:nth-child(1)
+            margin-left: 0
+
+.active
+    text-decoration: underline
+
+.logOut
+    color: $red
+    cursor: pointer

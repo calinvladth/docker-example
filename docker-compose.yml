@@ -1,0 +1,64 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+
+services:
+  frontend:
+    build:
+      context: ./eshop_v1
+    restart: always
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    labels:
+      - traefik.http.routers.eshop.rule=Host(`eshop.localhost`)
+      - traefik.port=3000
+    volumes:
+      - ./eshop_v1:/eshop
+      - /eshop/node_modules
+    networks:
+      - web
+  dashboard:
+    build:
+      context: ./eshop_admin
+    restart: always
+    stdin_open: true
+    ports:
+      - "4000:4000"
+    #    labels:
+    #      - traefik.http.routers.dashboard.rule=Host(`dashboard.localhost`)
+    #      - traefik.port=4000
+    volumes:
+      - ./eshop_admin:/dashboard
+      - /dashboard/node_modules
+    networks:
+      - web
+  backend:
+    build:
+      context: ./eshop_server
+    # command: gunicorn server.wsgi --bind 0.0.0.0:8000 # I'm not sure if gunicorn updates on changes
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: always
+    ports:
+      - "8000:8000"
+    labels:
+      - traefik.http.routers.api.rule=Host(`api.localhost`)
+      - traefik.port=8000
+    volumes:
+      - ./eshop_server:/django
+    networks:
+      - web
+  nginx:
+    image: nginx:1.17.10
+    container_name: nginx_demo
+    depends_on:
+      - dashboard
+      - backend
+    volumes:
+      - ./nginx/conf.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    networks:
+      - web

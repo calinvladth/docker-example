@@ -1,0 +1,21 @@
+{
+    "taxes": {
+        "shipping": 20,
+        "free_shipping_over": 150
+    },
+    "pagination": {
+        "items_store": 6,
+        "items_admin": 3
+    },
+    "payment": {
+        "stripe_public": "pk_test_51IBfUcBnmBPJMaV8hSCwAsVdBVX89D4jsQnfrFxNckFe77HO6Vsg9CVCUHTW4A7DF4SfPSXrjJeyGlGw50JzPVTm00XF6AzDvF",
+        "stripe_secret": "sk_test_51IBfUcBnmBPJMaV8tE6CyvhgasWFkUnclY9VdVHrXcuRblRR90h8gAPUWWoaxQLUCUa9C6iTVaM7PCEHjVeQado400lp69IF1D",
+        "currency": "usd"
+    },
+    "shops": [
+        "es-v1",
+        "es-v2",
+        "es-v3",
+        "es-v4"
+    ]
+}

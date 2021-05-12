@@ -1,0 +1,1 @@
+Simple store api created in Django
